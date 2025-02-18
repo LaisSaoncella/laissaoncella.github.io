@@ -1,0 +1,532 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding-top: 80px; /* Space for fixed menu */
+}
+
+/* Menu Section Styles */
+.menu-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  z-index: 1000;
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-section .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-section .logo img {
+  height: 50px;
+}
+
+.menu-section .menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu-section .menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Hamburger Button Styles */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* About Section Styles */
+.about {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.about-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.about-image {
+  width: 400px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+  max-width: 500px;
+  text-align: left;
+}
+
+.about-left-item {
+  background-color: #D6C4DA;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+/* Specialties Section Styles */
+.specialties {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff
+}
+
+.specialty-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.specialty-item {
+  background-color: #D9E6D2;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.specialty-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.specialty-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.specialty-item p {
+  font-size: 1rem;
+  color: #000000;
+}
+
+/* Therapies Section Styles */
+.therapies {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.therapy-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.therapy-item {
+  background-color: #CDE9EC;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.therapy-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+/* Gallery Section Styles */
+.gallery {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid iframe,
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer .contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.footer .map {
+  flex: 1;
+  min-width: 300px;
+}
+
+.footer .map iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-section .menu {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-section .menu.active {
+    display: flex;
+  }
+
+  .menu-section .menu li {
+    margin: 10px 0;
+  }
+
+  .about-list {
+    flex-direction: column;
+  }
+
+  .about-image {
+    width: 250px;
+  }
+
+  .specialty-item {
+    padding: 15px;
+  }
+
+  .gallery-grid iframe,
+  .gallery-grid img {
+    height: 150px;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer .map iframe {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-section .logo img {
+    height: 40px;
+  }
+
+  .carousel-btn {
+    padding: 8px;
+    font-size: 20px;
+  }
+
+  .about-image {
+    width: 200px;
+  }
+
+  .gallery-grid iframe,
+  .gallery-grid img {
+    height: 120px;
+  }
+
+  .footer .map iframe {
+    height: 150px;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para a seção de avaliações */
+.reviews {
+  padding: 40px 0;
+  background-color: #D9E6D2; /* Cor de fundo da seção */
+}
+
+.reviews-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center; /* Centraliza o conteúdo dentro do container */
+}
+
+.reviews-header {
+  margin-bottom: 20px;
+}
+
+.reviews-list {
+  display: flex; /* Alinha os cards lado a lado */
+  flex-wrap: wrap; /* Permite quebrar para a próxima linha em telas menores */
+  gap: 20px; /* Espaçamento entre os cards */
+  justify-content: center; /* Centraliza os cards horizontalmente */
+  margin-bottom: 30px; /* Espaçamento entre os cards e o botão */
+}
+
+/* Estilo do card de avaliação */
+.review-card {
+  flex: 1 1 calc(33.33% - 40px); /* Largura de cada card (3 por linha) */
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  box-sizing: border-box; /* Garante que a largura inclua padding e borda */
+  background-color: #fff; /* Fundo branco para os cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  text-align: left; /* Alinha todo o conteúdo do card à esquerda */
+}
+
+/* Estilo do usuário (nome e foto) */
+.review-user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.review-user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.review-user span {
+  font-weight: bold; /* Nome do usuário em negrito */
+}
+
+/* Estilo das estrelas */
+.review-stars {
+  color: #ffcc00; /* Cor das estrelas */
+  margin-bottom: 10px; /* Espaçamento entre as estrelas e o texto */
+  font-size: 1rem; /* Tamanho das estrelas */
+}
+
+/* Estilo do texto da avaliação */
+.review-text {
+  font-size: 0.9rem;
+  color: #000000; /* Cor do texto */
+  line-height: 2; /* Espaçamento entre linhas */
+}
+
+/* Estilo do botão "Deixe sua avaliação" */
+.review-button {
+  display: inline-block; /* Centraliza o botão */
+  background-color: #007bff; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  padding: 12px 24px; /* Ajuste de tamanho */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px; /* Espaçamento acima do botão */
+}
+
+/* Estilos responsivos */
+@media (max-width: 992px) {
+  .review-card {
+    flex: 1 1 calc(50% - 40px); /* 2 cards por linha em telas médias */
+  }
+}
+
+@media (max-width: 768px) {
+  .review-card {
+    flex: 1 1 100%; /* 1 card por linha em telas pequenas */
+  }
+}
+
+/* Estilização da sessão do Instagram */
+#instagram h2 {
+  text-align: center; /* Centraliza o texto */
+  margin-bottom: 20px; /* Adiciona espaço abaixo do título */
+  margin-top: 20px;
+  color: #333; /* Cor do texto */
+  font-size: 24px; /* Tamanho da fonte */
+}
+.instagram-section {
+  background-color: #D6C4DA;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.instagram-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.instagram-media {
+  max-width: 300px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .instagram-grid {
+      gap: 15px;
+  }
+
+  .instagram-media {
+      max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .instagram-grid {
+      gap: 10px;
+  }
+
+  .instagram-media {
+      max-width: 100%;
+  }
+}
+
+/* Estilização do botão flutuante do WhatsApp */
+.whatsapp-button {
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 20px; /* Distância da parte inferior */
+    right: 20px; /* Distância da lateral direita */
+    width: 60px; /* Largura do botão */
+    height: 60px; /* Altura do botão */
+    border-radius: 50%; /* Formato circular */
+    background-color: #25D366; /* Cor verde do WhatsApp */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+    display: flex; /* Centraliza o ícone dentro do botão */
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; /* Remove sublinhado do link */
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+    transition: transform 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+}
+
+.whatsapp-button img {
+    width: 40px; /* Tamanho do ícone do WhatsApp */
+    height: 40px;
+}
+
+.footer .map iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .footer .map iframe {
+    height: 150px; /* Altura menor para dispositivos móveis */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer .map iframe {
+    height: 120px; /* Altura ainda menor para telas muito pequenas */
+  }
+}
+
+.footer .contact-info {
+  flex: 1; /* Ocupa o espaço disponível */
+  min-width: 300px; /* Largura mínima para evitar que fique muito pequena */
+  text-align: center; /* Centraliza o conteúdo dentro da div */
+  margin: 0 auto; /* Centraliza a div horizontalmente */
+}
+
+
+
+.footer .key-info {
+  flex: 1; /* Ocupa o espaço disponível */
+  min-width: 50px; /* Largura mínima para evitar que fique muito pequena */
+  text-align: center; /* Centraliza o conteúdo dentro da div */
+  margin: 0 auto; /* Centraliza a div horizontalmente */
+}
+
+#key-info h1 {
+  text-align: center; /* Centraliza o texto */
+  margin-bottom: 20px; /* Adiciona espaço abaixo do título */
+  color: #333; /* Cor do texto */
+  font-size: 24px; /* Tamanho da fonte */
+}
+
+.footer-disclaimer {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.8rem;
+  color: #ffffff;
+  background-color: #222;
+}
