@@ -1,442 +1,444 @@
-<file path="certificacoes.html">
-  <!DOCTYPE html>
-  <html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-br">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-          content="Certificações de Laís Saoncella, Terapeuta Ocupacional em Curitiba. Veja a linha do tempo das certificações e cursos da profissional.">
-    <title>Certificações - Laís Saoncella - Terapeuta Ocupacional Curitiba</title>
-    <link rel="stylesheet" href="./src/styles/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9Q8375R4G"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-D9Q8375R4G');
-    </script>
-    <style>
-      .certifications {
-        padding: 50px 20px;
-        text-align: center;
-        background-color: #D9E6D2;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="Certificações de Laís Saoncella, Terapeuta Ocupacional em Curitiba. Veja a linha do tempo das certificações e cursos da profissional.">
+  <title>Certificações - Laís Saoncella - Terapeuta Ocupacional Curitiba</title>
+  <link rel="stylesheet" href="./src/styles/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9Q8375R4G"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D9Q8375R4G');
+  </script>
+  <style>
+    .certifications {
+      padding: 50px 20px;
+      text-align: center;
+      background-color: #D9E6D2;
+    }
 
-      .certifications h2 {
-        margin-bottom: 30px;
-        color: #333;
-      }
+    .certifications h2 {
+      margin-bottom: 30px;
+      color: #333;
+    }
 
-      .certifications-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+    .certifications-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-      .professional-photo {
-        margin-bottom: 30px;
-      }
+    .professional-photo {
+      margin-bottom: 30px;
+    }
 
-      .professional-photo img {
-        width: 150px;
-        border-radius: 50%;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
+    .professional-photo img {
+      width: 150px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 
-      .timeline {
-        width: 80%;
-        max-width: 900px;
-        position: relative;
-        padding: 30px 0;
-      }
+    .timeline {
+      width: 80%;
+      max-width: 900px;
+      position: relative;
+      padding: 30px 0;
+    }
 
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 3px; /* Show line */
+      background-color: #CDE9EC; /* Line color */
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      margin-bottom: 35px;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-item:nth-child(odd) {
+      flex-direction: row-reverse;
+      text-align: right;
+      padding-right: 70px;
+    }
+
+    .timeline-item:nth-child(even) {
+      text-align: left;
+      padding-left: 70px;
+    }
+
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0px; /* Hide dot */
+      height: 0px; /* Hide dot */
+      border-radius: 50%;
+      background-color: transparent; /* Dot color */
+      border: none;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .timeline-item:nth-child(odd)::after {
+      right: 0;
+      left: auto;
+      transform: translateX(50%);
+    }
+
+    .timeline-item:nth-child(even)::after {
+      left: 0;
+      transform: translateX(-50%);
+    }
+
+    .timeline-date {
+      position: absolute;
+      top: -20px; /* Adjusted to move date above the icon */
+      font-size: 1.1em;
+      color: #555;
+      font-weight: bold;
+      background-color: #fff;
+      padding: 8px 15px;
+      border-radius: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .timeline-item:nth-child(odd) .timeline-date {
+      right: 0;
+      transform: translateX(50%);
+    }
+
+    .timeline-item:nth-child(even) .timeline-date {
+      left: 0;
+      transform: translateX(-50%);
+    }
+
+
+    .timeline-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+      flex: 1;
+    }
+
+    .timeline-content h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #333;
+      font-size: 1.3em;
+    }
+
+    .timeline-content h5.institution {
+      margin: 0;
+      font-size: 1em;
+      color: #666;
+      line-height: 1.7;
+      font-style: italic;
+      color: #777;
+      margin-top: 8px;
+    }
+
+
+    .timeline-content p {
+      margin: 0;
+      font-size: 1em;
+      color: #666;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
       .timeline::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 50%;
-        width: 3px; /* Show line */
-        background-color: #CDE9EC; /* Line color */
-        transform: translateX(-50%);
+        left: 20px;
       }
 
       .timeline-item {
-        margin-bottom: 35px;
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .timeline-item:last-child {
-        margin-bottom: 0;
+        flex-direction: row; /* Switch to row layout */
+        text-align: left; /* Align text to left */
+        padding-left: 20px; /* Adjust left padding */
+        padding-right: 20px; /* Keep right padding */
+        align-items: start; /* Align items to the start */
       }
 
       .timeline-item:nth-child(odd) {
-        flex-direction: row-reverse;
-        text-align: right;
-        padding-right: 70px;
+        flex-direction: row-reverse; /* Keep row-reverse for odd items */
+        text-align: right; /* Align text to right for odd items */
       }
 
       .timeline-item:nth-child(even) {
-        text-align: left;
-        padding-left: 70px;
+        text-align: left; /* Ensure even items are left-aligned */
       }
 
       .timeline-item::after {
-        content: '';
-        position: absolute;
-        top: 10px;
-        left: 50%;
+        left: 20px; /* Adjust dot position */
         transform: translateX(-50%);
-        width: 0px; /* Hide dot */
-        height: 0px; /* Hide dot */
-        border-radius: 50%;
-        background-color: transparent; /* Dot color */
-        border: none;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-        z-index: 1;
       }
 
-      .timeline-item:nth-child(odd)::after {
-        right: 0;
-        left: auto;
-        transform: translateX(50%);
-      }
-
+      .timeline-item:nth-child(odd)::after,
       .timeline-item:nth-child(even)::after {
-        left: 0;
+        left: 20px; /* Adjust dot position for odd/even */
         transform: translateX(-50%);
+        right: auto;
       }
 
       .timeline-date {
-        position: absolute;
-        top: -20px; /* Adjusted to move date above the icon */
-        font-size: 1.1em;
-        color: #555;
-        font-weight: bold;
-        background-color: #fff;
-        padding: 8px 15px;
-        border-radius: 20px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: relative; /* Change date position to relative */
+        top: auto; /* Reset top */
+        bottom: auto; /* Reset bottom */
+        left: auto; /* Reset left */
+        right: auto; /* Reset right */
+        margin-right: 15px; /* Add right margin for spacing */
+        transform: none; /* Remove transform */
       }
 
       .timeline-item:nth-child(odd) .timeline-date {
-        right: 0;
-        transform: translateX(50%);
+        margin-left: 15px; /* Add left margin for odd items */
+        margin-right: 0; /* Remove right margin for odd items */
       }
+    }
+  </style>
+</head>
 
-      .timeline-item:nth-child(even) .timeline-date {
-        left: 0;
-        transform: translateX(-50%);
-      }
-
-
-      .timeline-content {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
-        flex: 1;
-      }
-
-      .timeline-content h3 {
-        margin-top: 0;
-        margin-bottom: 10px;
-        color: #333;
-        font-size: 1.3em;
-      }
-
-      .timeline-content h5.institution {
-        margin: 0;
-        font-size: 1em;
-        color: #666;
-        line-height: 1.7;
-        font-style: italic;
-        color: #777;
-        margin-top: 8px;
-      }
-
-
-      .timeline-content p {
-        margin: 0;
-        font-size: 1em;
-        color: #666;
-        line-height: 1.7;
-      }
-
-      @media (max-width: 768px) {
-        .timeline::before {
-          left: 20px;
-        }
-
-        .timeline-item {
-          flex-direction: column;
-          text-align: center;
-          padding-left: 20px;
-          padding-right: 20px;
-        }
-
-        .timeline-item:nth-child(odd),
-        .timeline-item:nth-child(even) {
-          padding-left: 20px;
-          padding-right: 20px;
-          text-align: center;
-        }
-
-
-        .timeline-item::after {
-          left: 20px;
-          transform: translateX(-50%);
-        }
-
-        .timeline-item:nth-child(odd)::after,
-        .timeline-item:nth-child(even)::after {
-          left: 20px;
-          transform: translateX(-50%);
-          right: auto;
-        }
-
-        .timeline-date {
-          position: relative;
-          top: -30px; /* Adjusted for mobile to be further above icon */
-          left: auto;
-          right: auto;
-          transform: none;
-          margin-bottom: 10px;
-        }
-
-        .timeline-content {
-          text-align: left;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-  <!-- Menu Section -->
-  <section class="menu-section">
-    <div class="container">
-      <div>
-        <p>Laís Saoncella - Terapeuta Ocupacional</p>
-      </div>
-      <nav class="menu">
-        <ul>
-          <li><a href="index.html#sobre">Sobre</a></li>
-          <li><a href="index.html#especialidades">Princípios</a></li>
-          <li><a href="index.html#terapias">Serviços</a></li>
-          <li><a href="index.html#reviews">Depoimentos</a></li>
-          <li><a href="index.html#instagram">Instagram</a></li>
-          <li><a href="certificacoes.html">Certificações</a></li>
-          <li><a href="index.html#contact-info">Contato</a></li>
-        </ul>
-      </nav>
-      <button class="menu-toggle">&#9776;</button> <!-- Hamburger Button -->
+<body>
+<!-- Menu Section -->
+<section class="menu-section">
+  <div class="container">
+    <div>
+      <p>Laís Saoncella - Terapeuta Ocupacional</p>
     </div>
-  </section>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="index.html#especialidades">Princípios</a></li>
+        <li><a href="index.html#terapias">Serviços</a></li>
+        <li><a href="#reviews">Depoimentos</a></li>
+        <li><a href="#instagram">Instagram</a></li>
+        <li><a href="certificacoes.html">Certificações</a></li>
+        <li><a href="#contact-info">Contato</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle">&#9776;</button> <!-- Hamburger Button -->
+  </div>
+</section>
 
-  <!-- Certifications Section -->
-  <section id="certificacoes" class="certifications">
-    <h2>Certificações e Cursos</h2>
-    <div class="certifications-content">
-      <div class="professional-photo">
-        <img src="./src/assets/lais.jpg" alt="Foto de Laís Saoncella" loading="lazy">
+<!-- Certifications Section -->
+<section id="certificacoes" class="certifications">
+  <h2>Certificações e Cursos</h2>
+  <div class="certifications-content">
+    <div class="professional-photo">
+      <img src="./src/assets/lais.jpg" alt="Foto de Laís Saoncella" loading="lazy">
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-date">Fev de 2025</span>
+        <div class="timeline-content">
+          <h3>Curso Teórico-Prático de Confecção de Órteses em Termoplástico de Baixa Temperatura para Membros Superiores</h3>
+          <h5 class="institution">Hamato - Órteses e Reabilitação</h5>
+        </div>
       </div>
-      <div class="timeline">
-        <div class="timeline-item">
-          <span class="timeline-date">Fev de 2025</span>
-          <div class="timeline-content">
-            <h3>Curso Teórico-Prático de Confecção de Órteses em Termoplástico de Baixa Temperatura para Membros Superiores</h3>
-            <h5 class="institution">Hamato - Órteses e Reabilitação</h5>
-          </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Set de 2024</span>
+        <div class="timeline-content">
+          <h3>Conceitos e Aplicação da Terapia de Restrição e Indução do Movimento</h3>
+          <h5 class="institution">Prekoce - Fisioterapia Neurofuncional</h5>
         </div>
-        <div class="timeline-item">
-          <span class="timeline-date">Set de 2024</span>
-          <div class="timeline-content">
-            <h3>Conceitos e Aplicação da Terapia de Restrição e Indução do Movimento</h3>
-            <h5 class="institution">Prekoce - Fisioterapia Neurofuncional</h5>
-          </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Jul de 2022</span>
+        <div class="timeline-content">
+          <h3>Curso Básico de Tratamento Neuroevolutivo - Conceito Bobath</h3>
+          <h5 class="institution">Associação Brasileira para o Desenvolvimento e Divulgação do Conceito Neuroevolutivo Bobath</h5>
         </div>
-        <div class="timeline-item">
-          <span class="timeline-date">Jul de 2022</span>
-          <div class="timeline-content">
-            <h3>Curso Básico de Tratamento Neuroevolutivo - Conceito Bobath</h3>
-            <h5 class="institution">Associação Brasileira para o Desenvolvimento e Divulgação do Conceito Neuroevolutivo Bobath</h5>
-          </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Abr de 2021</span>
+        <div class="timeline-content">
+          <h3>Bandagem em Neuropediatria</h3>
+          <h5 class="institution">Inclusão Eficiente - Assessoria e Consultoria em Inclusão e Reabilitação, IE, Brasil</h5>
         </div>
-        <div class="timeline-item">
-          <span class="timeline-date">Abr de 2021</span>
-          <div class="timeline-content">
-            <h3>Bandagem em Neuropediatria</h3>
-            <h5 class="institution">Inclusão Eficiente - Assessoria e Consultoria em Inclusão e Reabilitação, IE, Brasil</h5>
-          </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Set de 2020</span>
+        <div class="timeline-content">
+          <h3>Curso de Emergências Psiquiátricas</h3>
+          <h5 class="institution">Universidade Federal de Mato Grosso - UFMT</h5>
         </div>
-        <div class="timeline-item">
-          <span class="timeline-date">Set de 2020</span>
-          <div class="timeline-content">
-            <h3>Curso de Emergências Psiquiátricas</h3>
-            <h5 class="institution">Universidade Federal de Mato Grosso - UFMT</h5>
-          </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Ago de 2020</span>
+        <div class="timeline-content">
+          <h3>Gerontecnologia: Princípios e Práticas para Apoiar a Sociedade em Envelhecimento</h3>
+          <h5 class="institution">Sociedade Brasileira de Gerontecnologia</h5>
         </div>
-        <div class="timeline-item">
-          <span class="timeline-date">Ago de 2020</span>
-          <div class="timeline-content">
-            <h3>Gerontecnologia: Princípios e Práticas para Apoiar a Sociedade em Envelhecimento</h3>
-            <h5 class="institution">Sociedade Brasileira de Gerontecnologia</h5>
-          </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Mar de 2020</span>
+        <div class="timeline-content">
+          <h3>Cuidadores e a Atenção Domiciliar</h3>
+          <h5 class="institution">Universidade Federal de Ciências da Saúde de Porto Alegre - UFCSPA</h5>
         </div>
-        <div class="timeline-item">
-          <span class="timeline-date">Mar de 2020</span>
-          <div class="timeline-content">
-            <h3>Cuidadores e a Atenção Domiciliar</h3>
-            <h5 class="institution">Universidade Federal de Ciências da Saúde de Porto Alegre - UFCSPA</h5>
-          </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Fev de 2020</span>
+        <div class="timeline-content">
+          <h3>Abordagem Familiar na Atenção Domiciliar</h3>
+          <h5 class="institution">Universidade Federal de Ciências da Saúde de Porto Alegre - UFCSPA</h5>
         </div>
-        <div class="timeline-item">
-          <span class="timeline-date">Fev de 2020</span>
-          <div class="timeline-content">
-            <h3>Abordagem Familiar na Atenção Domiciliar</h3>
-            <h5 class="institution">Universidade Federal de Ciências da Saúde de Porto Alegre - UFCSPA</h5>
-          </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Jan de 2020</span>
+        <div class="timeline-content">
+          <h3>Avaliação Multidimensional da Pessoa Idosa</h3>
+          <h5 class="institution">Fundação Oswaldo Cruz - FIOCRUZ</h5>
         </div>
-        <div class="timeline-item">
-          <span class="timeline-date">Jan de 2020</span>
-          <div class="timeline-content">
-            <h3>Avaliação Multidimensional da Pessoa Idosa</h3>
-            <h5 class="institution">Fundação Oswaldo Cruz - FIOCRUZ</h5>
-          </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Jan de 2020</span>
+        <div class="timeline-content">
+          <h3>Saúde da Pessoa Idosa - Abordagem Familiar, Manejo das Fragilidades e da Rede de Apoio</h3>
+          <h5 class="institution">Fundação Oswaldo Cruz - FIOCRUZ</h5>
         </div>
-        <div class="timeline-item">
-          <span class="timeline-date">Jan de 2020</span>
-          <div class="timeline-content">
-            <h3>Saúde da Pessoa Idosa - Abordagem Familiar, Manejo das Fragilidades e da Rede de Apoio</h3>
-            <h5 class="institution">Fundação Oswaldo Cruz - FIOCRUZ</h5>
-          </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Out de 2019</span>
+        <div class="timeline-content">
+          <h3>Ações Estratégicas Para a Saúde da Pessoa Idosa</h3>
+          <h5 class="institution">Fundação Oswaldo Cruz - FIOCRUZ</h5>
         </div>
-        <div class="timeline-item">
-          <span class="timeline-date">Out de 2019</span>
-          <div class="timeline-content">
-            <h3>Ações Estratégicas Para a Saúde da Pessoa Idosa</h3>
-            <h5 class="institution">Fundação Oswaldo Cruz - FIOCRUZ</h5>
-          </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Out de 2019</span>
+        <div class="timeline-content">
+          <h3>Oficina de Atividades e Recursos Terapêuticos na Terapia Ocupacional em Contextos Hospitalares e Cuidados Paleativos</h3>
+          <h5 class="institution">Conselho Regional de Fisioterapia e Terapia Ocupacional da 10ª Região - CREFITO 10</h5>
         </div>
-        <div class="timeline-item">
-          <span class="timeline-date">Out de 2019</span>
-          <div class="timeline-content">
-            <h3>Oficina de Atividades e Recursos Terapêuticos na Terapia Ocupacional em Contextos Hospitalares e Cuidados Paleativos</h3>
-            <h5 class="institution">Conselho Regional de Fisioterapia e Terapia Ocupacional da 10ª Região - CREFITO 10</h5>
-          </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Out de 2019</span>
+        <div class="timeline-content">
+          <h3>Oficina de Tecnologia Assistiva</h3>
+          <h5 class="institution">Conselho Regional de Fisioterapia e Terapia Ocupacional da 10ª Região - CREFITO 10</h5>
         </div>
-        <div class="timeline-item">
-          <span class="timeline-date">Out de 2019</span>
-          <div class="timeline-content">
-            <h3>Oficina de Tecnologia Assistiva</h3>
-            <h5 class="institution">Conselho Regional de Fisioterapia e Terapia Ocupacional da 10ª Região - CREFITO 10</h5>
-          </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Set de 2019</span>
+        <div class="timeline-content">
+          <h3>Cuidados Paliativos: Possibilidades e Desafios</h3>
+          <h5 class="institution">Universidade Federal do Paraná - UFPR</h5>
         </div>
-        <div class="timeline-item">
-          <span class="timeline-date">Set de 2019</span>
-          <div class="timeline-content">
-            <h3>Cuidados Paliativos: Possibilidades e Desafios</h3>
-            <h5 class="institution">Universidade Federal do Paraná - UFPR</h5>
-          </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Set de 2019</span>
+        <div class="timeline-content">
+          <h3>Envelhecimento da População Brasileira</h3>
+          <h5 class="institution">Fundação Oswaldo Cruz - FIOCRUZ</h5>
         </div>
-        <div class="timeline-item">
-          <span class="timeline-date">Set de 2019</span>
-          <div class="timeline-content">
-            <h3>Envelhecimento da População Brasileira</h3>
-            <h5 class="institution">Fundação Oswaldo Cruz - FIOCRUZ</h5>
-          </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Set de 2019</span>
+        <div class="timeline-content">
+          <h3>Papel do Terapeuta Ocupacional em Cuidados Paliativos</h3>
+          <h5 class="institution">Universidade Federal do Paraná - UFPR</h5>
         </div>
-        <div class="timeline-item">
-          <span class="timeline-date">Set de 2019</span>
-          <div class="timeline-content">
-            <h3>Papel do Terapeuta Ocupacional em Cuidados Paliativos</h3>
-            <h5 class="institution">Universidade Federal do Paraná - UFPR</h5>
-          </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Abr de 2019</span>
+        <div class="timeline-content">
+          <h3>Programa de Educação Continuada Ottobock</h3>
+          <h5 class="institution">Ottobock</h5>
         </div>
-        <div class="timeline-item">
-          <span class="timeline-date">Abr de 2019</span>
-          <div class="timeline-content">
-            <h3>Programa de Educação Continuada Ottobock</h3>
-            <h5 class="institution">Ottobock</h5>
-          </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Jun de 2018</span>
+        <div class="timeline-content">
+          <h3>Atuação da Terapia Ocupacional nos Cuidado Paleativos</h3>
+          <h5 class="institution">Universidade Federal do Paraná - UFPR</h5>
         </div>
-        <div class="timeline-item">
-          <span class="timeline-date">Jun de 2018</span>
-          <div class="timeline-content">
-            <h3>Atuação da Terapia Ocupacional nos Cuidado Paleativos</h3>
-            <h5 class="institution">Universidade Federal do Paraná - UFPR</h5>
-          </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Jun de 2018</span>
+        <div class="timeline-content">
+          <h3>Consultoria Domiciliar e Empresarial para Adaptações de Ambientes</h3>
+          <h5 class="institution">Universidade Federal do Paraná - UFPR</h5>
         </div>
-        <div class="timeline-item">
-          <span class="timeline-date">Jun de 2018</span>
-          <div class="timeline-content">
-            <h3>Consultoria Domiciliar e Empresarial para Adaptações de Ambientes</h3>
-            <h5 class="institution">Universidade Federal do Paraná - UFPR</h5>
-          </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Jun de 2018</span>
+        <div class="timeline-content">
+          <h3>Terapia Ocupacional na Estimulação Infantil</h3>
+          <h5 class="institution">Universidade Federal do Paraná - UFPR</h5>
         </div>
-        <div class="timeline-item">
-          <span class="timeline-date">Jun de 2018</span>
-          <div class="timeline-content">
-            <h3>Terapia Ocupacional na Estimulação Infantil</h3>
-            <h5 class="institution">Universidade Federal do Paraná - UFPR</h5>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-date">Jun de 2018</span>
-          <div class="timeline-content">
-            <h3>Terapia Ocupacional no Contexto Escolar</h3>
-            <h5 class="institution">Universidade Federal do Paraná - UFPR</h5>
-          </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-date">Jun de 2018</span>
+        <div class="timeline-content">
+          <h3>Terapia Ocupacional no Contexto Escolar</h3>
+          <h5 class="institution">Universidade Federal do Paraná - UFPR</h5>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer class="footer">
-    <div class="map">
-      <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDmkYvswu3ldy1uyi7BZTTIFv4ojgxSlw0&q=Laís+Saoncella,Curitiba">
-      </iframe>
-    </div>
+<footer class="footer">
+  <div class="map">
+    <iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDmkYvswu3ldy1uyi7BZTTIFv4ojgxSlw0&q=Laís+Saoncella,Curitiba">
+    </iframe>
+  </div>
 
-    <div class="contact-info" id="contact-info">
-      <h3>Entre em Contato</h3>
-      <p><i class="fas fa-envelope"></i> Email: <a
-              href="mailto:contato.terapeuta.ocupacional@gmail.com">contato.terapeuta.ocupacional@gmail.com</a> </p>
-      <p><i class="fas fa-phone"></i> Telefone: (15) 99647-4946</p>
-      <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua Visconde do Rio Branco, 1358, Sala 604
-      <p>Centro, Curitiba - PR - CEP:80420-210</p>
-    </div>
-    <div class="key-info" id="key-info">
-      <h1>Laís Saoncella</h1>
-      <h1>Terapeuta Ocupacional Curitiba</h1>
-      <h1>Terapia Ocupacional Curitiba</h1>
-      <h1>Reabilitação Cognitiva Curitiba</h1>
-      <h1>Reabilitação Neurofuncional Curitiba</h1>
-      <h1>Confecção de Órteses Curitiba</h1>
-    </div>
-    <div class="footer-disclaimer">
-      <p>Site em conformidade com as normas do <a href="https://www.coffito.gov.br" target="_blank">COFFITO</a> e <a
-              href="http://www.crefito8.org.br" target="_blank">CREFITO</a>, garantindo serviço de terapia ocupacional ético
-        e de qualidade. © <span id="currentYear"></span> - Laís Saoncella - Terapeuta Ocupacional. Todos os direitos
-        reservados.</p>
-    </div>
+  <div class="contact-info" id="contact-info">
+    <h3>Entre em Contato</h3>
+    <p><i class="fas fa-envelope"></i> Email: <a
+            href="mailto:contato.terapeuta.ocupacional@gmail.com">contato.terapeuta.ocupacional@gmail.com</a> </p>
+    <p><i class="fas fa-phone"></i> Telefone: (15) 99647-4946</p>
+    <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua Visconde do Rio Branco, 1358, Sala 604
+    <p>Centro, Curitiba - PR - CEP:80420-210</p>
+  </div>
+  <div class="key-info" id="key-info">
+    <h1>Laís Saoncella</h1>
+    <h1>Terapeuta Ocupacional Curitiba</h1>
+    <h1>Terapia Ocupacional Curitiba</h1>
+    <h1>Reabilitação Cognitiva Curitiba</h1>
+    <h1>Reabilitação Neurofuncional Curitiba</h1>
+    <h1>Confecção de Órteses Curitiba</h1>
+  </div>
+  <div class="footer-disclaimer">
+    <p>Site em conformidade com as normas do <a href="https://www.coffito.gov.br" target="_blank">COFFITO</a> e <a
+            href="http://www.crefito8.org.br" target="_blank">CREFITO</a>, garantindo serviço de terapia ocupacional ético
+      e de qualidade. © <span id="currentYear"></span> - Laís Saoncella - Terapeuta Ocupacional. Todos os direitos
+      reservados.</p>
+  </div>
 
-  </footer>
+</footer>
 
-  <script type="module" src="./src/scripts/script.js"></script>
-  <script
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmkYvswu3ldy1uyi7BZTTIFv4ojgxSlw0&amp;libraries=places"></script>
-  <script>
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-  </script>
-  </body>
+<script type="module" src="./src/scripts/script.js"></script>
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmkYvswu3ldy1uyi7BZTTIFv4ojgxSlw0&amp;libraries=places"></script>
+<script>
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
+</body>
 
-  </html>
-</file>
+</html>
